@@ -122,7 +122,7 @@ function CompleteAddress(): JSX.Element{
             placeholder="ZIP Code"
           />
       
-          <button type="submit">Save profile</button>
+          <button type="submit">Save address</button>
           <button type="button" onClick={() => navigate("/home")}>Back</button>
         </form>
       </>
