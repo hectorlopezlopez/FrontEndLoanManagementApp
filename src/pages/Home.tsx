@@ -156,7 +156,7 @@ function Home(): JSX.Element {
             <div className = "fst-italic">
               <b>Street number:</b></div>
             <div className = "fw-light">
-              <p className = "fst-italic">{address?.street}</p>
+              <p className = "fst-italic">{address?.streetNum}</p>
           </div>
         </li>
         <li className = "list-group-item d-flex justify-content-between">
