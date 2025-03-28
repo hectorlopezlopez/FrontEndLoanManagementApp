@@ -54,7 +54,7 @@ function Home(): JSX.Element {
   }
 
   // GET USER BY ID 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUserIdInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserId(event.target.value);
   };
 
@@ -197,7 +197,7 @@ function Home(): JSX.Element {
           <div className = "form-floating mb-3"
                style = {{position: "absolute", bottom: "140px", right: "220px"}}>
             <input style = {{textAlign: "center"}}
-                   type = "number" placeholder = "User ID" value = {userId} onChange={handleInputChange}/>
+                   type = "number" placeholder = "User ID" value = {userId} onChange={handleUserIdInputChange}/>
           </div>
           <button type = "button" className = "btn btn-info"
             onClick = {handleViewLoanById}
