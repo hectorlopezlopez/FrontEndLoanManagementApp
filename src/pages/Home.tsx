@@ -49,13 +49,22 @@ function Home(): JSX.Element {
     navigate("/loans");
   }
 
-  const handleViewUserById = async (): Promise<void> => {
-    navigate("/*");
-  }
-
   const handleViewLoanById = async (): Promise<void> => {
     navigate("/*");
   }
+
+  // GET USER BY ID 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUserId(event.target.value);
+  };
+
+  const handleSearch = () => {
+    if (userId) {
+      // Redirect to the GetUserById page with the userId
+      navigate(`/user/${userId}`);
+    }
+  };
+  // GET USER BY ID
 
   console.log("USER desde Home:", user);
   console.log("ROLE desde Home:", role?.roleId);
@@ -181,14 +190,14 @@ function Home(): JSX.Element {
             margin: "30px", padding: "10px 30px"}}><b>View loans</b>
           </button>
           <button type = "button" className = "btn btn-info"
-            onClick = {handleViewUserById}
+            onClick = {handleSearch}
             style = {{position: "absolute", bottom: "160px", right: "0px",
             margin: "30px", padding: "10px 30px"}}><b>View user</b>
           </button>
           <div className = "form-floating mb-3"
                style = {{position: "absolute", bottom: "140px", right: "220px"}}>
             <input style = {{textAlign: "center"}}
-                   type = "text" placeholder = "User ID" value = {user?.idUser} onChange={e => setUserId(e.target.value)}/>
+                   type = "number" placeholder = "User ID" value = {userId} onChange={handleInputChange}/>
           </div>
           <button type = "button" className = "btn btn-info"
             onClick = {handleViewLoanById}
