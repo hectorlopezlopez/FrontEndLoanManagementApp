@@ -195,7 +195,7 @@ function Home(): JSX.Element {
             margin: "30px", padding: "10px 30px"}}><b>View user</b>
           </button>
           <div className = "form-floating mb-3"
-               style = {{position: "absolute", bottom: "140px", right: "220px"}}>
+               style = {{position: "absolute", bottom: "180px", right: "200px"}}>
             <input style = {{textAlign: "center"}}
                    type = "number" placeholder = "User ID" value = {userId} onChange={handleUserIdInputChange}/>
           </div>
@@ -205,15 +205,20 @@ function Home(): JSX.Element {
             margin: "30px", padding: "10px 30px"}}><b>View loan</b>
           </button>
           <div className = "form-floating mb-3"
-               style = {{position: "absolute", bottom: "60px", right: "220px"}}>
+               style = {{position: "absolute", bottom: "105px", right: "200px"}}>
             <input style = {{textAlign: "center"}}
-                   type = "text" placeholder = "Loan ID" value = {"null"} onChange={e => setLoanId(e.target.value)}/>
+                   type = "number" placeholder = "Loan ID view" value = {"null"} onChange={e => setLoanId(e.target.value)}/>
           </div>
           <button type = "button" className = "btn btn-info"
             onClick = {handleCreateNewLoan}
             style = {{position: "absolute", bottom: "0px", right: "0px",
             margin: "30px", padding: "10px 20px"}}><b>Update loan</b>
           </button>
+          <div className = "form-floating mb-3"
+               style = {{position: "absolute", bottom: "25px", right: "200px"}}>
+            <input style = {{textAlign: "center"}}
+                   type = "number" placeholder = "Loan ID update" value = {"null"} onChange={e => setLoanId(e.target.value)}/>
+          </div>
         </div>
       )}
 
